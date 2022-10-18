@@ -8,11 +8,11 @@ public class MovieAnalyzer {
 
     public MovieAnalyzer(String dataset_path) throws IOException {
 //        BufferedReader infile = new BufferedReader(new FileReader(dataset_path));
-        FileInputStream fis = new FileInputStream(dataset_path);
-        InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
-        BufferedReader br = new BufferedReader(isr);
-        br.readLine();
-        String line;
+    FileInputStream fis = new FileInputStream(dataset_path);
+    InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+    BufferedReader br = new BufferedReader(isr);
+    br.readLine();
+    String line;
         while ((line = br.readLine()) != null) {
             String[] item = line.trim().split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)", -1);
             cont.add(item);
