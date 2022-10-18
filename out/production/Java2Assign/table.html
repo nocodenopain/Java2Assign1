@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <script type="text/javascript" src="table.js"></script>
+    <meta charset="UTF-8"/>
+    <title>Open Courses</title>
+    <link rel="stylesheet" type="text/css" href="table.css"/>
+</head>
+<body onload="initial()">
+<table>
+    <caption id="a"><h2>Open Courses</h2></caption>
+    <tr>
+        <th>Course Name</th>
+        <th>Course Code</th>
+        <th>Language</th>
+        <th>Teacher</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Location</th>
+        <th>Duration</th>
+        <th>Operation</th>
+    </tr>
+    <tbody id="tbody" style="display: none">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <input type="button" value="Delete" onclick="removeRow(this)"><br>
+            <input type="button" value="Edit" onclick="removeRow(this)">
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <form name="form1">
+        Course Name
+        <label>
+            <input type="text" name="Course Name"/>
+        </label>
+        <br/> Course Code:
+        <label>
+            <input type="text" name="Course Code"/>
+        </label>
+        <br/> Language:
+        <label>
+            <input type="radio" name="meta" value="Chinese"> Chinese
+            <input type="radio" name="meta" value="English"> English
+            <input type="radio" name="meta" value="Bilingual"> Bilingual
+        </label>
+        <br/> Teacher:
+        <label>
+            <input type="text" name="teacher"/>
+        </label>
+        <br/> Date:
+        <form action="time">
+            <input type="date" name="date">
+        <br/>Time:
+            <input type="time" name="time">
+        </form>
+        Location:
+        <label>
+            <select name="skills">
+                <option value="Teaching Building No.1 Lecture Hall">Teaching Building No.1 Lecture Hall</option>
+                <option value="Research Building Lecture Hall">Research Building Lecture Hall</option>
+                <option value="Library Conference Hall">Library Conference Hall</option>
+                <option value="Activity Room">Activity Room</option>
+            </select>
+        </label>
+        <br/> Duration:
+        <label>
+            <input type="text" name="duration"/>
+        </label>
+        <br/>
+        <input type="button" value="Submit" onclick="onClickAdd()">
+        <input type="button" value="Cancel" onclick="cancelOp()"><br>
+        <br/>
+    </form>
+</div>
+
+</body>
+</html>
