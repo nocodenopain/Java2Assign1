@@ -21,6 +21,13 @@ function Hide() {
     document.getElementById('window').classList.add('hide');
 }
 
+let goal;
+\\
+
+
+
+
+
 function onClickEdit(obj) {
     Show1();
     goal = obj.parentNode.parentNode
