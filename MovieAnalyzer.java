@@ -20,9 +20,9 @@ public class MovieAnalyzer {
     }
 
     public Map<Integer, Integer> getMovieCountByYear() {
-        Map<Integer, Integer> map = new LinkedHashMap<>();
-        int[] dic = new int[2050];
-        for (String[] strings : cont) {
+    Map<Integer, Integer> map = new LinkedHashMap<>();
+    int[] dic = new int[2050];
+    for (String[] strings : cont) {
             if (strings[2] != null) dic[Integer.parseInt(strings[2])]++;
         }
         for (int i = 2049; i >= 0; i--) {
