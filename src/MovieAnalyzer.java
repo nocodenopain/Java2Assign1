@@ -6,12 +6,12 @@ public class MovieAnalyzer {
     List<String[]> cont = new ArrayList<>();
     int length;
 
-  public MovieAnalyzer(String dataset_path) throws IOException {
-    FileInputStream fis = new FileInputStream(dataset_path);
-    InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
-    BufferedReader br = new BufferedReader(isr);
-    br.readLine();
-    String line;
+    public MovieAnalyzer(String dataset_path) throws IOException {
+        FileInputStream fis = new FileInputStream(dataset_path);
+        InputStreamReader isr = new InputStreamReader(fis, StandardCharsets.UTF_8);
+        BufferedReader br = new BufferedReader(isr);
+        br.readLine();
+        String line;
         while ((line = br.readLine()) != null) {
             String[] item = line.trim().split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)", -1);
             cont.add(item);
