@@ -32,8 +32,8 @@ public class MovieAnalyzer {
     }
 
     public Map<String, Integer> getMovieCountByGenre() {
-        Map<String, Integer> map = new LinkedHashMap<>();
-        Map<String, Integer> tmp = new HashMap<>();
+    Map<String, Integer> map = new LinkedHashMap<>();
+    Map<String, Integer> tmp = new HashMap<>();
         for (int i = 0; i < length; i++) {
             if (cont.get(i)[5] != null) {
                 String s = cont.get(i)[5];
